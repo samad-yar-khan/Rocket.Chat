@@ -2,6 +2,7 @@
 import { Meteor } from 'meteor/meteor';
 
 import { MessageTypes } from '../../ui-utils/lib/MessageTypes';
+// import { callbacks } from '../../../lib/callbacks';
 
 Meteor.startup(function () {
 	MessageTypes.registerType({
@@ -142,7 +143,7 @@ Meteor.startup(function () {
 		data(message) {
 			return {
 				username: message.msg,
-				role: message.role || '',
+				role: ('role' in message && message.role) || '',
 				user_by: message.u.username,
 			};
 		},

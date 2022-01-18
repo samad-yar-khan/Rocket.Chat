@@ -106,6 +106,8 @@ export const MessageAction = new (class {
 		return Tracker.nonreactive(() => {
 			const btns = this.buttons.get();
 			delete btns[id];
+			mem.clear(this._getButtons);
+			mem.clear(this.getButtonsByGroup);
 			return this.buttons.set(btns);
 		});
 	}
@@ -115,6 +117,8 @@ export const MessageAction = new (class {
 			const btns = this.buttons.get();
 			if (btns[id]) {
 				btns[id] = _.extend(btns[id], config);
+				mem.clear(this._getButtons);
+				mem.clear(this.getButtonsByGroup);
 				return this.buttons.set(btns);
 			}
 		});

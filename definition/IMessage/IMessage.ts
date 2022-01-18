@@ -95,10 +95,12 @@ export interface IMessage extends IRocketChatRecord {
 	bot?: boolean;
 	sentByEmail?: boolean;
 	webRtcCallEndTs?: Date;
-	role?: string;
 
 	avatar?: string;
 	emoji?: string;
+
+	/* @deprecated */
+	role?: string;
 }
 
 export type MessageSystem = {
