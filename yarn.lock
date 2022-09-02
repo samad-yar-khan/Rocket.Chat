@@ -3563,25 +3563,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rocket.chat/fuselage-ui-kit@npm:next":
-  version: 0.32.0-dev.70
-  resolution: "@rocket.chat/fuselage-ui-kit@npm:0.32.0-dev.70"
-  dependencies:
-    "@rocket.chat/ui-kit": ~0.32.0-dev.55
-    tslib: ^2.3.1
-  peerDependencies:
-    "@rocket.chat/fuselage": "*"
-    "@rocket.chat/fuselage-hooks": "*"
-    "@rocket.chat/fuselage-polyfills": "*"
-    "@rocket.chat/icons": "*"
-    "@rocket.chat/styled": "*"
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: 173ca663f36444a12e8f432904a284e9c13de038c6b74d174bd0243462c0d3a2f37d514981adcdddd939d82488eef61f3f4065b8c5714a4eb3478c30d0e80594
-  languageName: node
-  linkType: hard
-
-"@rocket.chat/fuselage-ui-kit@workspace:packages/fuselage-ui-kit":
+"@rocket.chat/fuselage-ui-kit@workspace:^, @rocket.chat/fuselage-ui-kit@workspace:packages/fuselage-ui-kit":
   version: 0.0.0-use.local
   resolution: "@rocket.chat/fuselage-ui-kit@workspace:packages/fuselage-ui-kit"
   dependencies:
@@ -3884,7 +3866,7 @@ __metadata:
     "@rocket.chat/fuselage-polyfills": next
     "@rocket.chat/fuselage-toastbar": next
     "@rocket.chat/fuselage-tokens": next
-    "@rocket.chat/fuselage-ui-kit": next
+    "@rocket.chat/fuselage-ui-kit": "workspace:^"
     "@rocket.chat/gazzodown": "workspace:^"
     "@rocket.chat/icons": next
     "@rocket.chat/layout": next
@@ -4411,6 +4393,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rocket.chat/ui-kit@file:../../packages/ui-kit::locator=rocket.chat%40workspace%3A.":
+  version: 0.31.16
+  resolution: "@rocket.chat/ui-kit@file:../../packages/ui-kit#../../packages/ui-kit::hash=c8ff58&locator=rocket.chat%40workspace%3A."
+  checksum: 1d753128ad9dbc21b0e75a8efbc89bdf143a3a268a98baa68adbc91e22223d5afb1d12f65b60e31bff9614d0d201bc1ba01907ac5a4e31ec08a0a9bf58b77a29
+  languageName: node
+  linkType: hard
+
 "@rocket.chat/ui-kit@npm:^0.14.1":
   version: 0.14.1
   resolution: "@rocket.chat/ui-kit@npm:0.14.1"
@@ -4418,7 +4407,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rocket.chat/ui-kit@npm:next, @rocket.chat/ui-kit@npm:~0.32.0-dev.55":
+"@rocket.chat/ui-kit@npm:next":
   version: 0.32.0-dev.55
   resolution: "@rocket.chat/ui-kit@npm:0.32.0-dev.55"
   checksum: 8abeb7772fa9f8b2d309ba05ec460284bca6457115a4032da04ca74d4bf9064db389719e127cf541f6c98e5068f928b9242bf76be2bcfcfc2ed3e57850a46363
@@ -27510,6 +27499,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rocket.chat@workspace:."
   dependencies:
+    "@rocket.chat/ui-kit": "file:../../packages/ui-kit"
     "@types/chart.js": ^2.9.37
     "@types/js-yaml": ^4.0.5
     husky: ^7.0.4
